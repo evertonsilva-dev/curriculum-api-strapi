@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "languages",
+  "info": {
+    "name": "Languages"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "languageName": {
+      "type": "string"
+    },
+    "percent": {
+      "type": "decimal"
+    }
+  }
+}

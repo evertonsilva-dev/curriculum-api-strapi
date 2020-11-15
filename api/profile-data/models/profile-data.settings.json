@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profile_data",
+  "info": {
+    "name": "Profile Data"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "relationship": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "contact": {
+      "model": "contact"
+    },
+    "skills": {
+      "collection": "skills"
+    },
+    "socials": {
+      "collection": "social"
+    },
+    "profilePicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Biography": {
+      "type": "richtext"
+    },
+    "languages": {
+      "collection": "languages"
+    },
+    "work_histories": {
+      "collection": "work-history"
+    },
+    "educations": {
+      "collection": "education"
+    }
+  }
+}
